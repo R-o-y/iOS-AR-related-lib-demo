@@ -35,6 +35,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2229EC371F5EAEED0099E98D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22EA87531F5D7FE1006CF591 /* AppDelegate.swift */,
+				22EA875C1F5D7FE1006CF591 /* LaunchScreen.storyboard */,
+				22EA875F1F5D7FE1006CF591 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		22EA87471F5D7FE1006CF591 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +64,10 @@
 		22EA87521F5D7FE1006CF591 /* CoreMotionDemo */ = {
 			isa = PBXGroup;
 			children = (
-				22EA87531F5D7FE1006CF591 /* AppDelegate.swift */,
+				2229EC371F5EAEED0099E98D /* Supporting Files */,
 				22EA87551F5D7FE1006CF591 /* ViewController.swift */,
 				22EA87571F5D7FE1006CF591 /* Main.storyboard */,
 				22EA875A1F5D7FE1006CF591 /* Assets.xcassets */,
-				22EA875C1F5D7FE1006CF591 /* LaunchScreen.storyboard */,
-				22EA875F1F5D7FE1006CF591 /* Info.plist */,
 			);
 			path = CoreMotionDemo;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 				22EA87641F5D7FE1006CF591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

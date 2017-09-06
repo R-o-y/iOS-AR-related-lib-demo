@@ -17,6 +17,10 @@
 		2229EC891F5F90FC0099E98D /* pm0025_00_Eye1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2229EC841F5F90FC0099E98D /* pm0025_00_Eye1.png */; };
 		2229EC8A1F5F90FC0099E98D /* pm0025_00_Mouth1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2229EC851F5F90FC0099E98D /* pm0025_00_Mouth1.png */; };
 		2229EC8B1F5F90FC0099E98D /* untitled2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 2229EC861F5F90FC0099E98D /* untitled2.dae */; };
+		2229ECAC1F5FEDFC0099E98D /* DeviceMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229ECAB1F5FEDFC0099E98D /* DeviceMotionManager.swift */; };
+		2229ECAE1F5FEE1E0099E98D /* Vector3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229ECAD1F5FEE1E0099E98D /* Vector3D.swift */; };
+		2229ECB11F5FEE840099E98D /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229ECB01F5FEE840099E98D /* CameraViewController.swift */; };
+		2229ECB51F601FBF0099E98D /* GameViewController_ModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229ECB41F601FBF0099E98D /* GameViewController_ModelExtension.swift */; };
 		22EA87721F5D81E6006CF591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA87711F5D81E6006CF591 /* AppDelegate.swift */; };
 		22EA87761F5D81E6006CF591 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA87751F5D81E6006CF591 /* GameViewController.swift */; };
 		22EA87791F5D81E6006CF591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22EA87771F5D81E6006CF591 /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 		2229EC841F5F90FC0099E98D /* pm0025_00_Eye1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pm0025_00_Eye1.png; sourceTree = "<group>"; };
 		2229EC851F5F90FC0099E98D /* pm0025_00_Mouth1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pm0025_00_Mouth1.png; sourceTree = "<group>"; };
 		2229EC861F5F90FC0099E98D /* untitled2.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = untitled2.dae; sourceTree = "<group>"; };
+		2229ECAB1F5FEDFC0099E98D /* DeviceMotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceMotionManager.swift; sourceTree = "<group>"; };
+		2229ECAD1F5FEE1E0099E98D /* Vector3D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3D.swift; sourceTree = "<group>"; };
+		2229ECB01F5FEE840099E98D /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		2229ECB41F601FBF0099E98D /* GameViewController_ModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController_ModelExtension.swift; sourceTree = "<group>"; };
 		22EA876E1F5D81E6006CF591 /* SceneKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EA87711F5D81E6006CF591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22EA87751F5D81E6006CF591 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +98,15 @@
 			name = obj2;
 			sourceTree = "<group>";
 		};
+		2229ECAF1F5FEE300099E98D /* CoreMotionWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				2229ECAB1F5FEDFC0099E98D /* DeviceMotionManager.swift */,
+				2229ECAD1F5FEE1E0099E98D /* Vector3D.swift */,
+			);
+			name = CoreMotionWrapper;
+			sourceTree = "<group>";
+		};
 		22EA87651F5D81E6006CF591 = {
 			isa = PBXGroup;
 			children = (
@@ -109,10 +126,13 @@
 		22EA87701F5D81E6006CF591 /* SceneKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2229ECAF1F5FEE300099E98D /* CoreMotionWrapper */,
 				2229EC811F5F90C70099E98D /* obj2 */,
 				2229EC761F5EFE2C0099E98D /* obj */,
 				2229EC361F5EAEB70099E98D /* Supporting Files */,
 				22EA87751F5D81E6006CF591 /* GameViewController.swift */,
+				2229ECB41F601FBF0099E98D /* GameViewController_ModelExtension.swift */,
+				2229ECB01F5FEE840099E98D /* CameraViewController.swift */,
 				22EA87771F5D81E6006CF591 /* Main.storyboard */,
 			);
 			path = SceneKitDemo;
@@ -201,8 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2229ECB51F601FBF0099E98D /* GameViewController_ModelExtension.swift in Sources */,
 				22EA87761F5D81E6006CF591 /* GameViewController.swift in Sources */,
+				2229ECB11F5FEE840099E98D /* CameraViewController.swift in Sources */,
 				22EA87721F5D81E6006CF591 /* AppDelegate.swift in Sources */,
+				2229ECAC1F5FEDFC0099E98D /* DeviceMotionManager.swift in Sources */,
+				2229ECAE1F5FEE1E0099E98D /* Vector3D.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

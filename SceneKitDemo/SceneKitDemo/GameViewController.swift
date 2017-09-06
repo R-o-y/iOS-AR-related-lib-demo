@@ -21,7 +21,6 @@ class GameViewController: UIViewController {
         
         scnView = SCNView(frame: view.frame)
         scnView.backgroundColor = UIColor.white
-        
         view.addSubview(scnView)
         
         scnView.scene = scene
@@ -38,15 +37,22 @@ class GameViewController: UIViewController {
     }
     
     private func generateNode() -> SCNNode? {
-        return SCNScene(named: "untitled.dae")?.rootNode.childNode(withName: "PikachuM", recursively: true)
+        return SCNScene(named: "untitled2.dae")?.rootNode.childNode(withName: "PikachuM", recursively: true)
     }
     
     private func setupCameraNode() {
         cameraNode.camera = SCNCamera()
         scene.rootNode.addChildNode(cameraNode)
-        cameraNode.position = SCNVector3(x: -6, y: 0, z: 18)
+        
+        
+        var transform = SCNMatrix4Rotate(SCNMatrix4Identity, -Float.pi/2, 0, 1, 0)
+        transform = SCNMatrix4Rotate(transform, Float.pi/2, 1, 0, 0)
+        cameraNode.transform = transform
+        
+        cameraNode.position = SCNVector3(x: -8, y: 0, z: 6)
+        
         // pokemon face to negative x
-        // camera face to negative z, position at (0,0,0)
+        // camera face to negative z
     }
     
     func handleTap(_ gestureRecognize: UIGestureRecognizer) {
@@ -99,12 +105,6 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-
 }
 
 

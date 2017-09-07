@@ -22,7 +22,7 @@ class DeviceMotionManager {
     private static var instance: DeviceMotionManager?
     
     private let cmMotionManager = CMMotionManager()
-    private var motion: CMDeviceMotion?
+    public var motion: CMDeviceMotion?
     private var rotationMatrix: CMRotationMatrix {
         if let deviceMotion = motion {
             return deviceMotion.attitude.rotationMatrix

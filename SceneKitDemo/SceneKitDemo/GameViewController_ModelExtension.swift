@@ -14,7 +14,8 @@ extension GameViewController {
         let scaleFactor: Float = 0.18
         let pikachuNode = SCNScene(named: "untitled2.dae")?.rootNode.childNode(withName: "PikachuM", recursively: true)
         pikachuNode?.scale = SCNVector3(x: scaleFactor, y: scaleFactor, z: scaleFactor)
-        pikachuNode?.position = SCNVector3(x: 0, y: -1.6, z: -2)
+        pikachuNode?.position = SCNVector3(x: 0, y: 0, z: -2)
+        pikachuNode?.name = "pikachu"
         return pikachuNode!
     }
     
@@ -22,7 +23,8 @@ extension GameViewController {
         let scaleFactor: Float = 0.008
         let pikachuNode = SCNScene(named: "untitled.dae")?.rootNode.childNode(withName: "PikachuM", recursively: true)
         pikachuNode?.scale = SCNVector3(x: scaleFactor, y: scaleFactor, z: scaleFactor)
-        pikachuNode?.position = SCNVector3(x: 0, y: -1.6, z: -2)
+        pikachuNode?.position = SCNVector3(x: 0, y: 0, z: -2)
+        pikachuNode?.name = "pikachu"
         return pikachuNode!
     }
     
@@ -31,6 +33,18 @@ extension GameViewController {
         cameraNode.camera = SCNCamera()
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 0)
         return cameraNode
+    }
+    
+    public func generateGroundNode() -> SCNNode {
+        let floor = SCNNode(geometry: SCNFloor())
+        
+        floor.physicsBody = SCNPhysicsBody.static()
+        floor.physicsBody?.restitution = 1
+        
+        floor.position = SCNVector3(x: 0, y: 0, z: 0)
+        
+        floor.geometry!.firstMaterial!.diffuse.contents = UIColor.clear
+        return floor
     }
     
 }

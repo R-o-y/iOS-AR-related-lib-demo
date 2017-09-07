@@ -66,6 +66,7 @@
 		2229EC361F5EAEB70099E98D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2229ECB01F5FEE840099E98D /* CameraViewController.swift */,
 				22EA87711F5D81E6006CF591 /* AppDelegate.swift */,
 				22EA877A1F5D81E6006CF591 /* Assets.xcassets */,
 				22EA877C1F5D81E6006CF591 /* LaunchScreen.storyboard */,
@@ -132,7 +133,6 @@
 				2229EC361F5EAEB70099E98D /* Supporting Files */,
 				22EA87751F5D81E6006CF591 /* GameViewController.swift */,
 				2229ECB41F601FBF0099E98D /* GameViewController_ModelExtension.swift */,
-				2229ECB01F5FEE840099E98D /* CameraViewController.swift */,
 				22EA87771F5D81E6006CF591 /* Main.storyboard */,
 			);
 			path = SceneKitDemo;

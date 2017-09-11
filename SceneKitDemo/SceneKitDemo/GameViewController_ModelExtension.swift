@@ -14,7 +14,7 @@ extension GameViewController {
         let scaleFactor: Float = 0.18
         let pikachuNode = SCNScene(named: "untitled2.dae")?.rootNode.childNode(withName: "PikachuM", recursively: true)
         pikachuNode?.scale = SCNVector3(x: scaleFactor, y: scaleFactor, z: scaleFactor)
-        pikachuNode?.position = SCNVector3(x: 0, y: 0, z: -2)
+        pikachuNode?.position = SCNVector3(x: 2, y: 0, z: 0)
         pikachuNode?.name = "pikachu"
         return pikachuNode!
     }
@@ -23,7 +23,7 @@ extension GameViewController {
         let scaleFactor: Float = 0.008
         let pikachuNode = SCNScene(named: "untitled.dae")?.rootNode.childNode(withName: "PikachuM", recursively: true)
         pikachuNode?.scale = SCNVector3(x: scaleFactor, y: scaleFactor, z: scaleFactor)
-        pikachuNode?.position = SCNVector3(x: 0, y: 0, z: -2)
+        pikachuNode?.position = SCNVector3(x: 2, y: 0, z: 0)
         pikachuNode?.name = "pikachu"
         return pikachuNode!
     }

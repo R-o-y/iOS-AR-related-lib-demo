@@ -34,13 +34,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addChildViewController(cameraViewController)
-        cameraViewController.setupCameraView()
-        
-        startObservingDeviceMotion()
-        
         scnView = SCNView(frame: view.frame)
-        scnView.backgroundColor = UIColor.clear
+        scnView.backgroundColor = UIColor.clear  // change to .clear when camera on
         scnView.scene = scene
         view.addSubview(scnView)
         
@@ -49,7 +44,20 @@ class GameViewController: UIViewController {
         
         pikachuNode = generateNode()
         scene.rootNode.addChildNode(pikachuNode)
+        
+        // remove following if motion on
+//        cameraNode.transform = SCNMatrix4MakeRotation(-0.38, 1, 0, 0)
+//        cameraNode.position = SCNVector3(x: 0, y: 1.8, z: 0)
+//        pikachuNode.transform = SCNMatrix4Rotate(pikachuNode.transform, Float.pi / 2, 0, 1, 0)
+//        pikachuNode?.position = SCNVector3(x: 0, y: 0, z: -2)
+//        scnView.allowsCameraControl = true
 
+        
+        addChildViewController(cameraViewController)
+        cameraViewController.setupCameraView()
+//
+        startObservingDeviceMotion()
+//
         enableJumpingInteraction()
     }
 
@@ -73,6 +81,7 @@ class GameViewController: UIViewController {
     }
     
     /********************* enable jumping interaction **************************/
+    
     private func enableJumpingInteraction() {
         pikachuNode?.physicsBody = SCNPhysicsBody(
             type: .dynamic,

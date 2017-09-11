@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     private var v: UIView!
     private lazy var displayLink: CADisplayLink = CADisplayLink(target: self,
-                                                                selector: #selector(horzLoop))
+                                                                selector: #selector(yawVerticalLoop))
 
     private var perspectiveTransform: CATransform3D {
         var perspectiveTransform = CATransform3DIdentity
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
         v.layer.transform = CATransform3DConcat(v.layer.transform, transform)
     }
     
-    @objc private func rollVerticalLoop() {
+    @objc private func rollVerticalLoop() {  // try yaw + vertical in the same way
         let bottomBorder = v.frame.maxY
         let topBorder = v.frame.minY
         if topBorder < 0 || bottomBorder > view.frame.height {
@@ -109,13 +109,13 @@ class ViewController: UIViewController {
         
         let transform1 = CATransform3DMakeTranslation(0, verticalTranslationRate, 0)
         v.layer.transform = CATransform3DConcat(v.layer.transform, transform1)
-        let transform2 = CATransform3DMakeRotation(0.08, 0, 1, 0)
+        let transform2 = CATransform3DMakeRotation(0.08, 0, 0, 1)
         v.layer.transform = CATransform3DConcat(v.layer.transform, transform2)
     }
     
     var yawTransformation = CATransform3DIdentity
     var verticalTransformation = CATransform3DIdentity
-    @objc private func yawVerticalLoop() {  // correct
+    @objc private func yawVerticalLoop() {  // correct way to combine yaw & vertical
         let bottomBorder = v.frame.maxY
         let topBorder = v.frame.minY
         if topBorder < 0 || bottomBorder > view.frame.height {
